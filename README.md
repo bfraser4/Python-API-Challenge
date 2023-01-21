@@ -1,4 +1,4 @@
-# Unit 6 Homework: What's the Weather Like?
+# OpenWeatherAPI Analysis: What's the Weather Like?
 
 ## Background
 
@@ -7,46 +7,6 @@ Whether financial, political, or social&mdash;data's true power rests in its abi
 Now, we know what you may be thinking: _"Duh. It gets hotter ..."_
 
 But, if pressed, how would you **prove** it?
-
-### Before You Begin
-
-1. Create a new repository for this project called `python-api-challenge`. **Do not add this homework to an existing repository**.
-
-2. Clone the new repository to your computer.
-
-3. Inside your local Git repository, create a directory for both of the Python challenges. Use a folder name that corresponds to the challenges, such as **WeatherPy**.
-
-4. Inside the folder you just created, add new files called `WeatherPy.ipynb` and `VacationPy.ipynb`. These will be the main scripts to run for each analysis.
-
-5. Push the above changes to GitHub.
-
-
-### Adding a .gitignore File
-
-We don't want the `api_keys.py` file containing the API key to be exposed to the public on GitHub; this would mean anyone could copy and use our API key, possibly incurring charges.
-
-When we type `git status` in the command line, we can see all the untracked files that we have created so far.
-
-If we only wanted to add the `WeatherPy.ipynb` file to GitHub, we could type `git add WeatherPy.ipynb`. However, every time we want to add a new file or update current files to the repository, we would have to add each file individually, which is time-consuming and cumbersome. Instead, we can add the files that we don't want to track to the `.gitignore` file.
-
-Before we add our files to GitHub, let's add `api_keys.py` to the `.gitignore` file. Use the following instructions:
-
-1. Open your `python-api-challenge` GitHub folder in VS Code.
-
-2. Open the `.gitignore` file, and on the first line, type the following code:
-
-```python
-# Adding config.py file.
-api_keys.py
-```
-
-3. While the `.gitignore` file is open, add the `API_practice.ipynb` and `random_numbers.ipynb` files and save the file.
-
-4. In the command line, type `git status` and press Enter. The output should indicate that the `.gitignore` file has been modified and the `WeatherPy.ipynb` file is untracked.
-
-5. Use `git add`, `git commit`, and `git push` to commit the modifications to `.gitignore` and the `WeatherPy.ipynb` file to GitHub.
-
-On GitHub, the only new file you should find is the `WeatherPy.ipynb` file.
 
 
 ## Part 1: WeatherPy
@@ -123,34 +83,6 @@ As final considerations:
 * Your plots must include labeling aspects like plot title (with date of analysis) and axis labels.
 * For max intensity in the heatmap, try setting it to the highest humidity found in the dataset.
 
-## Hints and Considerations
-
-* The city data that you generate is based on random coordinates and different query times, so your outputs will not be an exact match to the provided starter notebook.
-
-* If you'd like a refresher on the geographic coordinate system, [this site](http://desktop.arcgis.com/en/arcmap/10.3/guide-books/map-projections/about-geographic-coordinate-systems.htm) has great information.
-
-* Next, take some time to study the OpenWeatherMap API. Based on your initial study, you should be able to answer basic questions about the API: Where do you request the API key? Which Weather API in particular will you need? What URL endpoints does it expect? What JSON structure does it respond with? Before you write a line of code, you should have a crystal-clear understanding of your intended outcome.
-
-* A starter code for citipy has been provided. However, if you're craving an extra challenge, push yourself to learn how it works: [citipy Python library](https://pypi.python.org/pypi/citipy). Before you try to incorporate the library in your analysis, start with simple test cases outside your main script to confirm that you are using it correctly. Often, when introduced to a new library, students will spend hours trying to figure out errors in their code&mdash;a simple test case can save you a lot of time and frustration.
-
-* You will need to apply your critical thinking skills to understand how and why we're recommending the tools we are. What is citipy used for? Why would you use it in conjunction with the OpenWeatherMap API? How would you do so?
-
-* While building your script, pay attention to the cities you are using in your query pool. Are you covering the full range of latitudes and longitudes? Or are you choosing 500 cities from one region of the world? Even if you were a geography genius, simply listing 500 cities based on your personal selection would create a biased dataset. Try to think of ways that you can counter this. 
-
-  * **Hint:** Consider the full range of latitudes.
-
-* Once you have computed the linear regression for one relationship, you will follow a similar process for all other charts. As a bonus, try to create a function that will create these charts based on different parameters.
-
-* Remember that each coordinate will trigger a separate call to the Google API. If you're creating your own criteria to plan your vacation, try to reduce the results in your DataFrame to 10 or fewer cities.
-
-* Ensure your repository has regular commits and a thorough README.md file.
-
-* Lastly, remember that this is a challenging activity. Push yourself! If you complete this task, you can safely say that you've gained a strong understanding of the core foundations of data analytics, and it will only get better from here. Good luck!
-
 ## Rubric
 
 [Unit 6 Homework Rubric](https://docs.google.com/document/d/1Y17QYjs0KMeEPPGd_1BpMjnqXiTaJVeFwqea5ReMdeU/edit?usp=sharing)
-
-- - -
-
-© 2022 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
